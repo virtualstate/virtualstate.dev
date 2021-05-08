@@ -1,0 +1,33 @@
+{
+  "name": "talk-proposal",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build && node scripts/prerender.js",
+    "test": "echo \"This template does not include a test runner by default.\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.21",
+    "@types/node": "^14.14.35",
+    "jsdom": "^16.5.3",
+    "snowpack": "^3.3.5",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@opennetwork/progressive-merge": "^5.2.0",
+    "@opennetwork/vdom": "^20.1.0",
+    "@opennetwork/vdom-react": "^5.0.1",
+    "@opennetwork/vnode": "^26.1.0",
+    "@opennetwork/vnode-fragment": "^7.0.0",
+    "@opennetwork/vnode-hooks": "^7.0.0",
+    "fp-ts": "^2.10.4",
+    "io-ts": "^2.2.16",
+    "iterable": "^5.7.0",
+    "microtask-collector": "^3.1.0"
+  },
+  "engines": {
+    "node": "^15.2.1"
+  }
+}
