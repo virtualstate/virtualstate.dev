@@ -1,6 +1,6 @@
-import { SourceReference, VNode } from '@opennetwork/vnode';
-import { assertElement, NativeOptionsVNode, render } from '@opennetwork/vdom';
-import { h } from '@opennetwork/vnode';
+import { SourceReference, VNode } from '@virtualstate/x';
+import { assertElement, NativeOptionsVNode, render } from '@virtualstate/dom';
+import { h } from '@virtualstate/x';
 
 export interface UnboundOptions {
   reference?: SourceReference;

@@ -1,5 +1,5 @@
 import { h } from "./h";
 import { SiteContents } from "./contents";
-import { createFragment } from '@opennetwork/vdom';
+import { createFragment } from '@virtualstate/dom';
 
 export const SiteBody = <SiteContents />

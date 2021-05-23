@@ -155,6 +155,42 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@virtualstate/dom@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@virtualstate/dom/-/dom-1.0.7.tgz#aa6b7f115be7dd46ee98bb3b80dece54518834cd"
+  integrity sha512-OWMdiIdUCh9tqaZ4KXNMf2ZUWtwum2xUK6kY4f9klpfiriF7sgc5DNg6LfoW4zulfZTqKvPZ+DkHqGKngvwkdg==
+
+"@virtualstate/fringe@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@virtualstate/fringe/-/fringe-1.0.7.tgz#de57b9f72c88b666e52c4acfc7e85d64a4e9c245"
+  integrity sha512-gvjNvGEdw02CiazuJZIJtRhFQ8vuRgC9alGYPgNEJSjnSvZTlT8COmvVUQ29IkevoT7tgDGy4weksX+kZht2vg==
+
+"@virtualstate/hooks-extended@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@virtualstate/hooks-extended/-/hooks-extended-1.0.7.tgz#2790e7ee807601df3d564104227df2edec015ba4"
+  integrity sha512-dDqmRvOjLsbsuGJ+8W7MNgXfImKcUtvVx3obSjvbcUHNqbQMHJodknmS42vHwtzO8OdN3QvYN+H3UdpEMg+alg==
+
+"@virtualstate/hooks@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@virtualstate/hooks/-/hooks-1.0.7.tgz#46f9e8a2edfcb5ee830f591bb9fff352334333a7"
+  integrity sha512-XW5azxi+tHflqTSwdr+7YHLL/KsHJRRIbmR1m5E9X9ZbeMxVP2xP0Q6+gtTyCQVO3QELZ8Svel4X8zQht5+eBg==
+
+"@virtualstate/union@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@virtualstate/union/-/union-1.0.7.tgz#8618e2bd6d218a9ee279550235fce3da8d835364"
+  integrity sha512-LiWJntnTr7gEBcBo5TognTtlKw6ErKS3x1Y8NbZ7KkqqaF+VgbdqRJYl56bI1RZZsG0efgBbZtfUHYtBRcSQRQ==
+
+"@virtualstate/x@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@virtualstate/x/-/x-1.0.7.tgz#9cd612415e58e6ba6736a7f06fb0507cdf6af2b7"
+  integrity sha512-AvxGK3XLEL70Ek2kqHSv3flPTXBtb23NPGclJyoESVsZVkyyxkF3vTwq/57rwWxGJJANEdMXeuKS6Ni7iAbRFQ==
+  dependencies:
+    "@virtualstate/fringe" "^1.0.7"
+    "@virtualstate/hooks" "^1.0.7"
+    "@virtualstate/union" "^1.0.7"
+    iterable "^5.6.0"
+    microtask-collector "^3.1.0"
+
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.5"
   resolved "https://registry.npmjs.org/abab/-/abab-2.0.5.tgz#c0b678fb32d60fc1219c784d6a826fe385aeb79a"
@@ -880,7 +916,7 @@ isstream@~0.1.2:
   resolved "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
-iterable@^5.7.0:
+iterable@^5.6.0, iterable@^5.7.0:
   version "5.7.0"
   resolved "https://registry.npmjs.org/iterable/-/iterable-5.7.0.tgz#6937296d3380c227f55fd5ca299e41a821d573f7"
   integrity sha512-xLERMG+ha4eAxSkms2iaJbjFW5V2uB8vFZVq6Kh+YwPax29IwMTdOIOoieeXOu6+nV0+xe82i2H346RLvsyigA==

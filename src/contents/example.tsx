@@ -1,8 +1,8 @@
 import { h } from '../h';
 import { Template } from '../template';
 import { Unbound } from '../unbound';
-import { VNode } from '@opennetwork/vnode';
-import { createFragment } from '@opennetwork/vnode';
+import { VNode } from '@virtualstate/x';
+import { createFragment } from '@virtualstate/x';
 
 export async function InitialExample() {
   return (

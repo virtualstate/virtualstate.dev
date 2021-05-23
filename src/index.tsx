@@ -1,7 +1,6 @@
-import { render, DOMVContext, createTimeline, Timeline } from '@opennetwork/vdom';
+import { render, DOMVContext, createTimeline, Timeline } from '@virtualstate/dom';
 import { SiteBody } from './site';
 import { h } from "./h";
-import { hookFragments } from '@opennetwork/vnode-fragment';
 
 async function run() {
 
@@ -21,7 +20,7 @@ async function run() {
     // );
 
     await render(
-      await hookFragments()(<SiteBody />),
+      <SiteBody />,
       context
     );
 

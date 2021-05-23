@@ -1,7 +1,7 @@
 {
-  "name": "talk-proposal",
+  "name": "virtualstate.dev",
   "private": true,
-  "license": "MIT",
+  "license": "CC-0",
   "type": "module",
   "scripts": {
     "start": "snowpack dev",
@@ -16,18 +16,15 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@opennetwork/progressive-merge": "^5.2.0",
-    "@opennetwork/vdom": "^20.1.0",
-    "@opennetwork/vdom-react": "^5.0.1",
-    "@opennetwork/vnode": "^26.1.0",
-    "@opennetwork/vnode-fragment": "^7.0.0",
-    "@opennetwork/vnode-hooks": "^7.0.0",
+    "@virtualstate/dom": "^1.0.7",
+    "@virtualstate/fringe": "^1.0.7",
+    "@virtualstate/hooks": "^1.0.7",
+    "@virtualstate/hooks-extended": "^1.0.7",
+    "@virtualstate/union": "^1.0.7",
+    "@virtualstate/x": "^1.0.7",
     "fp-ts": "^2.10.4",
     "io-ts": "^2.2.16",
     "iterable": "^5.7.0",
     "microtask-collector": "^3.1.0"
-  },
-  "engines": {
-    "node": "^15.2.1"
   }
 }

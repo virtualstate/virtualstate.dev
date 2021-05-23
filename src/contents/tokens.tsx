@@ -1,5 +1,5 @@
 import { h } from "../h";
-import { createToken } from '@opennetwork/vnode';
+import { createToken } from '@virtualstate/x';
 import { Template } from '../template';
 
 const Select = createToken(
