@@ -1,8 +1,7 @@
 import { h } from '../h';
 import { Template } from '../template';
 import { Unbound } from '../unbound';
-import { VNode } from '@virtualstate/x';
-import { createFragment } from '@virtualstate/x';
+import { VNode, Collector, createFragment } from '@virtualstate/x';
 
 export async function InitialExample() {
   return (
@@ -70,5 +69,70 @@ async function *Loading(options: unknown, child: VNode) {
         <InitialExample />
       </Unbound>
     </div>
+    <Template id="bouncing-ball-reacting-example">
+      <h2>Reacting to things</h2>
+      <pre>
+        {`
+import { Collector } from "@virtualstate/x";
+async function *ReactiveExample() {
+  const eventCollector = new Collector();
+  const onClick = eventCollector.add.bind(eventCollector);
+  const button = document.createElement("button");
+  button.addEventListener("click", onClick);
+
+  let visible = false;
+
+  yield <View />;
+
+  for await (const events of eventCollector) {
+    visible = events.reduce((visible: boolean) => !visible, visible);
+    yield <View />;
+  }
+
+  function View() {
+    return (
+      <div class="ball-container">
+        {visible ? <span class="ball" /> : undefined}
+        <button type="button" getDocumentNode={() => button}>{visible ? "Grab" : "Bounce"} Ball</button>
+      </div>
+    )
+  }
+}
+        `.trim()}
+      </pre>
+      <p>Renders the following output:</p>
+    </Template>
+    <div class="example-output">
+      <Unbound>
+        <ReactiveExample />
+      </Unbound>
+    </div>
   </section>
 )
+
+async function *ReactiveExample() {
+  const eventCollector = new Collector();
+  // Don't actually collect any event
+  const onClick = eventCollector.add.bind(eventCollector, Symbol("Click"));
+  const button = document.createElement("button");
+  button.addEventListener("click", onClick);
+
+  let visible = false;
+
+  yield <View />;
+
+  for await (const events of eventCollector) {
+    visible = events.reduce((visible: boolean) => !visible, visible);
+    console.log({ events, visible });
+    yield <View />;
+  }
+
+  function View() {
+    return (
+      <div class="ball-container">
+        {visible ? <span class="ball" /> : undefined}
+        <button type="button" getDocumentNode={() => button}>{visible ? "Grab" : "Bounce"} Ball</button>
+      </div>
+    )
+  }
+}

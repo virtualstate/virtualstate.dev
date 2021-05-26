@@ -2,7 +2,7 @@
 
 declare namespace JSX {
 
-  type DocumentNode = Element | Text;
+  type DocumentNode = Element | Text | Node;
 
   type Attributes = Record<string, unknown>;
 
@@ -16,6 +16,7 @@ declare namespace JSX {
 
   interface HTMLElementAttributes extends HTMLAriaAttributes, Attributes {
     onBeforeRender?(node: DocumentNode): void | Promise<void>;
+    getDocumentNode?(root: Element): DocumentNode | Promise<DocumentNode>;
     class?: string;
     accesskey?: string;
     contenteditable?: BooleanAttribute;

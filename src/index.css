@@ -75,3 +75,25 @@ a, button {
   max-width: 40rem;
 }
 
+.example-output .ball-container {
+  position: relative;
+}
+
+.example-output .ball-container .ball {
+  position: absolute;
+  right: 1em;
+  bottom: 0;
+  display: block;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  background-color: green;
+  animation: bounce 0.75s cubic-bezier(1, .0025, 1, 1);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from { transform: translate3d(0, 5%, 0);     }
+  to   { transform: translate3d(0, -70%, 0); }
+}
