@@ -76,7 +76,8 @@ async function *Loading(options: unknown, child: VNode) {
 import { Collector } from "@virtualstate/x";
 async function *ReactiveExample() {
   const eventCollector = new Collector();
-  const onClick = eventCollector.add.bind(eventCollector);
+  // Replace the first parameter, don't actually collect any event
+  const onClick = eventCollector.add.bind(eventCollector, Symbol("Click"));
   const button = document.createElement("button");
   button.addEventListener("click", onClick);
 
