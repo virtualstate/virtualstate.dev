@@ -86,6 +86,7 @@ a, button {
   display: block;
   width: 2em;
   height: 2em;
+  background: radial-gradient(circle at .2em .2em, #04a5d7, #000);
   border-radius: 100%;
   background-color: green;
   animation: bounce 0.75s cubic-bezier(1, .0025, 1, 1);
