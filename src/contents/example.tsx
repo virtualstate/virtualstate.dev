@@ -88,6 +88,9 @@ async function *ReactiveExample() {
   for await (const events of eventCollector) {
     visible = events.reduce((visible: boolean) => !visible, visible);
     yield <View />;
+    
+    // Re focus the button after the onClick, allows for toggling on and off with keyboard
+    button.focus();
   }
 
   function View() {
@@ -126,6 +129,9 @@ async function *ReactiveExample() {
     visible = events.reduce((visible: boolean) => !visible, visible);
     console.log({ events, visible });
     yield <View />;
+
+    // Re focus the button after the onClick, allows for toggling on and off with keyboard
+    button.focus();
   }
 
   function View() {
