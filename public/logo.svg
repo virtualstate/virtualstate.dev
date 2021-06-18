@@ -1,7 +1,146 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <path fill="#E44D26" d="M107.6 470.9l-33-370.3h362.8l-33.1 370.2L255.8 512z"/>
-  <path fill="#F16529" d="M256 480.5l120-33.3 28.3-316.3H256z"/>
-  <path fill="#EBEBEB" d="M256 268.2h-60.1l-4.1-46.5H256v-45.4H142.1l1.1 12.2 11.2 125.1H256zM256 386.2h-.2l-50.6-13.6-3.2-36.3h-45.6l6.4 71.3 93 25.9.2-.1z"/>
-  <path d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21.1v23h-23.1V0zM206 22.9h-20.3V0h63.7v22.9h-20.3V69H206V23zM259.5 0h24l14.9 24.3L313.2 0h24v69h-23V34.8l-15.8 24.6h-.4l-16-24.6V69h-22.5V0zM348.7 0h23.1v46.2h32.5V69h-55.6V0z"/>
-  <path fill="#FFF" d="M255.8 268.2v45.4h56l-5.3 58.9-50.7 13.7v47.2l93.1-25.8.7-7.6 10.7-119.6 1.1-12.2h-12.2zM255.8 176.3v45.4H365.5l.9-10.2 2.1-23 1.1-12.2z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+<style type="text/css">
+  .background {
+  fill: rgba(120, 120, 226, 0.3);
+  stroke: rgba(120, 120, 226, 0.9);
+  stroke-width: 10px;
+  stroke-dasharray: 50, 20;
+  stroke-linecap: round;
+  animation-name: background;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  }
+
+  .node {
+  fill: rgba(107, 43, 226, 0.75);
+  stroke: rgba(107, 43, 226, 0.75);
+  }
+
+  .fragment-edge {
+  stroke: rgba(107, 43, 226, 0.75);
+  stroke-dasharray: 5, 2, 5, 1, 10;
+  stroke-width: 3px;
+  animation-name: fragment-edge;
+  stroke-linecap: round;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  }
+
+  .direct-edge {
+  stroke: rgba(255, 43, 226, 0.75);
+  stroke-dasharray: 20, 5;
+  stroke-linecap: round;
+  animation-name: direct-edge;
+  animation-duration: 2750ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  }
+
+  .invisible-edge {
+  stroke: rgba(107, 43, 226, 0.75);
+  stroke-dasharray: 20, 5;
+  stroke-linecap: round;
+  stroke-width: 10px;
+  animation-name: invisible-edge;
+  animation-duration: 30000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  }
+
+  @keyframes background {
+  0% {
+  stroke-dasharray: 50, 20;
+  }
+  50% {
+  stroke-dasharray: 30, 30;
+  }
+  100% {
+  stroke-dasharray: 20, 50;
+  }
+  }
+
+  @keyframes fragment-edge {
+  0% {
+  stroke-dasharray: 20, 30, 20;
+  stroke-width: 20px;
+  }
+  25% {
+  stroke-dasharray: 20, 5, 10;
+  stroke-width: 5x;
+  }
+  50% {
+  stroke-dasharray: 20, 30, 20;
+  stroke-width: 15px;
+  }
+  75% {
+  stroke-dasharray: 20, 50, 20;
+  stroke-width: 5px;
+  }
+  100% {
+  stroke-dasharray: 20, 30, 20;
+  stroke-width: 10px;
+  }
+  }
+
+  @keyframes direct-edge {
+  0% {
+  stroke-dasharray: 20, 30, 20;
+  stroke-width: 10px;
+  }
+  25% {
+  stroke-dasharray: 20, 50, 20;
+  stroke-width: 5x;
+  }
+  50% {
+  stroke-dasharray: 20, 30, 20;
+  stroke-width: 15px;
+  }
+  75% {
+  stroke-dasharray: 20, 5, 10;
+  stroke-width: 5px;
+  }
+  100% {
+  stroke-dasharray: 20, 30, 20;
+  stroke-width: 20px;
+  }
+  }
+
+  @keyframes invisible-edge {
+  0% {
+  stroke-dasharray: 20, 5;
+  stroke-width: 3px;
+  opacity: 0.5;
+  }
+  25% {
+  stroke-dasharray: 5, 10;
+  stroke-width: 1x;
+  opacity: 0.1;
+  }
+  50% {
+  stroke-dasharray: 0, 10, 1;
+  stroke-width: 2px;
+  opacity: 0.8;
+  }
+  100% {
+  stroke-dasharray: 10, 2;
+  stroke-width: 20px;
+  opacity: 0.2;
+  }
+  }
+</style>
+<g class="spin">
+  <circle cx="250" cy="400" r="154" class="background" />
+  <line x1="340" y1="500" x2="250" y2="400" class="fragment-edge" />
+  <line x1="160" y1="500" x2="250" y2="400" class="fragment-edge" />
+  <line x2="160" y2="300" x1="250" y1="400" class="direct-edge" />
+  <line x2="340" y2="300" x1="250" y1="400" class="direct-edge" />
+  <line x1="160" y1="500" x2="340" y2="500" class="invisible-edge" />
+  <circle cx="160" cy="300" r="15" class="node" />
+  <circle cx="340" cy="300" r="15" class="node" />
+  <circle cx="250" cy="400" r="15" class="node" />
+  <circle cx="160" cy="500" r="15" class="node" />
+  <circle cx="340" cy="500" r="15" class="node" />
+</g>
 </svg>
