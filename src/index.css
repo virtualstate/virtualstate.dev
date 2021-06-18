@@ -121,13 +121,50 @@ h1 {
 
 .branded-x {
   color: transparent;
-  background: url("/logo.svg");
-  background-size: 1.5em 1.5em;
-  background-position: center;
+  position: relative;
+  display: inline-block;
   width: 1.5em;
   height: 1em;
-  display: inline-block;
   padding: 0;
   margin: 0;
   margin-left: -0.25em;
 }
+.branded-x:before,
+.branded-x:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: ' ';
+  background-image: url("/logo.svg");
+  background-size: 1.5em 1.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1.5em;
+  height: 1em;
+  display: inline-block;
+}
+
+.branded-x:after {
+  animation-name: logo-b;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-image: url("/logo-turbulence.svg");
+}
+
+@keyframes logo-a {
+  0% {
+    opacity: 0;    }
+  20%   {
+    opacity: 1; }
+  100%   {
+    opacity: 0; }
+}
+
+@keyframes logo-b {
+  0% {
+    opacity: 1;    }
+  100%   {
+    opacity: 0; }
+}
+

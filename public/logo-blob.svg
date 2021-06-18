@@ -130,7 +130,15 @@
   }
   }
 </style>
-<g class="spin">
+  <filter id="displacementFilter">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+    <feOffset dx="2" dy="4" />
+    <feMerge>
+      <feMergeNode in="SourceGraphic" />
+      <feMergeNode />
+    </feMerge>
+  </filter>
+<g class="spin" style="filter: url(#displacementFilter)">
   <circle cx="250" cy="400" r="154" class="background" />
   <line x1="340" y1="500" x2="250" y2="400" class="fragment-edge" />
   <line x1="160" y1="500" x2="250" y2="400" class="fragment-edge" />

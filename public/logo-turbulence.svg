@@ -130,8 +130,13 @@
   }
   }
 </style>
-<g class="spin">
-  <circle cx="250" cy="400" r="154" class="background" />
+  <filter id="displacementFilter">
+    <feTurbulence type="turbulence" baseFrequency=".00137"
+                  numOctaves="100" result="turbulence"/>
+    <feDisplacementMap in2="turbulence" in="SourceGraphic"
+                       scale="20" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+<g class="spin" style="filter: url(#displacementFilter)">
   <line x1="340" y1="500" x2="250" y2="400" class="fragment-edge" />
   <line x1="160" y1="500" x2="250" y2="400" class="fragment-edge" />
   <line x2="160" y2="300" x1="250" y1="400" class="direct-edge" />
