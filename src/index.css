@@ -136,10 +136,10 @@ h1 {
   top: 0;
   content: ' ';
   background-image: url("/logo.svg");
-  background-size: 1.5em 1.5em;
+  background-size: 1em 1em;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1.5em;
+  width: 1em;
   height: 1em;
   display: inline-block;
 }
@@ -150,19 +150,16 @@ h1 {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   background-image: url("/logo-turbulence.svg");
-}
-
-@keyframes logo-a {
-  0% {
-    opacity: 0;    }
-  20%   {
-    opacity: 1; }
-  100%   {
-    opacity: 0; }
+  transform: rotate(180deg);
+  transform-origin: center;
 }
 
 @keyframes logo-b {
   0% {
+    opacity: 0;    }
+  40% {
+    opacity: 1;    }
+  60% {
     opacity: 1;    }
   100%   {
     opacity: 0; }

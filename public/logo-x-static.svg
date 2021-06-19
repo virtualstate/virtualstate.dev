@@ -1,9 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="91 123 400 525">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318 318">
 <style type="text/css">
         .background {
         fill: rgba(120, 120, 226, 0.3);
+        stroke: transparent;
+        }
+        .background-ring {
+        fill: transparent;
         stroke: rgba(120, 120, 226, 0.9);
-        stroke-width: 10px;
+        stroke-width: 30px;
+        stroke-location: inside;
+        stroke-alignment: inner;
         stroke-dasharray: 50, 20;
         stroke-linecap: round;
         animation-name: background;
@@ -137,17 +143,24 @@
         }
         }
     </style>
+
+        <!-- 91, 241
+
+<rect x="0" y="0" width="318" height="318" fill="black">
+
+</rect>-->
+
     <g class="spin">
-        <circle cx="250" cy="400" r="154" class="background" />
-        <line x1="340" y1="500" x2="250" y2="400" class="fragment-edge" />
-        <line x1="160" y1="500" x2="250" y2="400" class="fragment-edge" />
-        <line x2="160" y2="300" x1="250" y1="400" class="direct-edge" />
-        <line x2="340" y2="300" x1="250" y1="400" class="direct-edge" />
-        <line x1="160" y1="500" x2="340" y2="500" class="invisible-edge" />
-        <circle cx="160" cy="300" r="15" class="node" />
-        <circle cx="340" cy="300" r="15" class="node" />
-        <circle cx="250" cy="400" r="15" class="node" />
-        <circle cx="160" cy="500" r="15" class="node" />
-        <circle cx="340" cy="500" r="15" class="node" />
+         <circle cx="159" cy="159" r="144" class="background" fill="green" />
+        <line x1="249" y1="259" x2="159" y2="159" class="fragment-edge" stroke="black" />
+        <line x1="69" y1="259" x2="159" y2="159" class="fragment-edge" stroke="black" />
+        <line x2="69" y2="59" x1="159" y1="159" class="direct-edge" stroke="black" />
+        <line x2="249" y2="59" x1="159" y1="159" class="direct-edge" stroke="black" />
+        <circle cx="69" cy="59" r="15" class="node" />
+        <circle cx="249" cy="59" r="15" class="node" />
+        <circle cx="159" cy="159" r="15" class="node" />
+        <circle cx="69" cy="259" r="15" class="node" />
+        <circle cx="249" cy="259" r="15" class="node" />
+        <circle cx="159" cy="159" r="144" class="background-ring" fill="green" />
     </g>
 </svg>
